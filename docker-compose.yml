@@ -1,0 +1,13 @@
+services:
+  tests:
+    build: .
+    environment:
+      BASE_URL: ${BASE_URL:-https://thinking-tester-contact-list.herokuapp.com}
+      ENV: ${ENV:-ci}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      CI: 1
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./blob-report:/app/blob-report
+      - ./test-results:/app/test-results
+      - ./logs:/app/logs
