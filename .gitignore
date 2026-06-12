@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# Playwright outputs
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+
+# Auth state (tokens, storageState), never commit
+/.auth/
+
+# Logs
+/logs/
+
+# Local environment
+.env
